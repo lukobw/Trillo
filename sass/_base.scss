@@ -1,21 +1,25 @@
 :root {
+    --border: 1px solid var(--color-grey-light-2);
     --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
     --color-grey-dark-1: #333;
     --color-grey-dark-2: #777;
-
     --color-grey-dark-3: #999;
     --color-grey-light-1: #FAF9F9;
     --color-grey-light-2: #F4F2F2;
     --color-grey-light-3: #F0EEEE;
-
     --color-grey-light-4: #CCC;
-
+    --shadow-light: 0 2rem 5rem rgba(0, 0, 0, .06);
     --color-primary: #EB2F64;
     --color-primary-dark: #BA265D;
     --color-primary-light: #F56;
-
     --color-white: #FFF;
 }
+
+$bp-largest: 75em; //1200px
+$bp-large: 68.75em; //1100px
+$bp-medium: 56.25em; //900px
+$bp-small: 37.5em; //600px
+$bp-smallest: 31.25em; //500px
 
 * {
     margin: 0;
@@ -31,6 +35,10 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 50%;
+    }
 }
 
 body {
